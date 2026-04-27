@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>精英网安新闻</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">JY</span>
+        <div>
+          <h1>精英网安新闻</h1>
+          <p>中文安全资讯聚合 · 标题摘要 · 原文跳转</p>
+        </div>
+      </div>
+      <form class="search" id="filters" autocomplete="off">
+        <label class="field">
+          <span>搜索</span>
+          <input id="searchInput" type="search" name="q" placeholder="漏洞、攻防、应急响应">
+        </label>
+        <label class="field">
+          <span>来源</span>
+          <select id="sourceSelect" name="source">
+            <option value="all">全部来源</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>标签</span>
+          <select id="tagSelect" name="tag">
+            <option value="all">全部标签</option>
+          </select>
+        </label>
+        <button class="icon-button" id="refreshButton" type="button" title="刷新 RSS">↻</button>
+      </form>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar" aria-label="来源状态">
+        <section class="panel">
+          <div class="section-heading">
+            <h2>来源状态</h2>
+            <span id="sourceSummary">加载中</span>
+          </div>
+          <canvas id="signalCanvas" width="420" height="220" aria-label="RSS 来源连接图"></canvas>
+          <div class="source-list" id="sourceList"></div>
+        </section>
+      </aside>
+
+      <section class="feed" aria-label="新闻列表">
+        <div class="feed-head">
+          <div>
+            <h2>最新资讯</h2>
+            <p id="feedMeta">正在拉取 RSS 来源…</p>
+          </div>
+          <p class="content-note">内容来源于原站，点击标题阅读原文。本站仅展示标题和摘要。</p>
+        </div>
+        <div class="news-list" id="newsList"></div>
+      </section>
+
+      <aside class="profile" aria-label="赛事查询">
+        <section class="panel">
+          <h3 class="profile-title">赛事查询</h3>
+          <p class="profile-lead">
+            <a href="http://www.supermatch.fun/" target="_blank" rel="noopener noreferrer">网络安全比赛日历</a>
+          </p>
+          <div class="note-list">
+            <article>
+              <h3>本周关注</h3>
+              <p>漏洞通告、应急响应、攻防技术、行业动态。</p>
+            </article>
+            <article>
+              <h3>阅读方式</h3>
+              <p>先看标题和摘要，遇到高价值内容再跳转原文深入学习。</p>
+            </article>
+            <article>
+              <h3>合规边界</h3>
+              <p>不全文转载，不采集非公开内容，只做学习导航。</p>
+            </article>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <template id="newsTemplate">
+      <article class="news-item">
+        <div class="news-topline">
+          <span class="source-pill"></span>
+          <time></time>
+        </div>
+        <h3><a target="_blank" rel="noopener noreferrer"></a></h3>
+        <p class="summary"></p>
+        <div class="tag-row"></div>
+      </article>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

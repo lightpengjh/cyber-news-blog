@@ -1,0 +1,26 @@
+{
+  "name": "cyber-news-blog",
+  "version": "1.0.0",
+  "description": "本地演示用的个人网络安全新闻聚合博客。",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "keywords": [
+    "cybersecurity",
+    "rss",
+    "news",
+    "blog"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "rss-parser": "^3.13.0"
+  }
+}

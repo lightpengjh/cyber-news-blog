@@ -1,0 +1,7 @@
+node_modules/
+.npm-cache/
+data/news-cache.json
+npm-debug.log*
+server.log
+server.err
+.env
