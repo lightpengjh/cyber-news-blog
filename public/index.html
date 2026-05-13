@@ -3,84 +3,244 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>精英网安新闻</title>
+    <title>网安罗盘</title>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <header class="topbar">
-      <div class="brand">
-        <span class="brand-mark" aria-hidden="true">JY</span>
-        <div>
-          <h1>精英网安新闻</h1>
-          <p>中文安全资讯聚合 · 标题摘要 · 原文跳转</p>
+      <a class="brand" href="#top" aria-label="网安罗盘首页">
+        <img class="brand-logo" src="/assets/logo.png" alt="网安罗盘 Logo">
+        <div class="brand-copy">
+          <h1>网安罗盘</h1>
+          <p>资讯 · 赛事 · 资源 · 路线 · 工具导航</p>
         </div>
-      </div>
-      <form class="search" id="filters" autocomplete="off">
-        <label class="field">
-          <span>搜索</span>
-          <input id="searchInput" type="search" name="q" placeholder="漏洞、攻防、应急响应">
-        </label>
-        <label class="field">
-          <span>来源</span>
-          <select id="sourceSelect" name="source">
-            <option value="all">全部来源</option>
-          </select>
-        </label>
-        <label class="field">
-          <span>标签</span>
-          <select id="tagSelect" name="tag">
-            <option value="all">全部标签</option>
-          </select>
-        </label>
-        <button class="icon-button" id="refreshButton" type="button" title="刷新 RSS">↻</button>
-      </form>
+      </a>
+
+      <nav class="nav-links" aria-label="栏目导航">
+        <a href="#news">资讯</a>
+        <a href="#events">赛事</a>
+        <a href="#resources">资源</a>
+        <a href="#roadmap">学习路线</a>
+        <a href="#tools">安全工具箱</a>
+      </nav>
     </header>
 
-    <main class="layout">
-      <aside class="sidebar" aria-label="来源状态">
-        <section class="panel">
-          <div class="section-heading">
-            <h2>来源状态</h2>
-            <span id="sourceSummary">加载中</span>
-          </div>
-          <canvas id="signalCanvas" width="420" height="220" aria-label="RSS 来源连接图"></canvas>
-          <div class="source-list" id="sourceList"></div>
-        </section>
-      </aside>
-
-      <section class="feed" aria-label="新闻列表">
-        <div class="feed-head">
-          <div>
-            <h2>最新资讯</h2>
-            <p id="feedMeta">正在拉取 RSS 来源…</p>
-          </div>
-          <p class="content-note">内容来源于原站，点击标题阅读原文。本站仅展示标题和摘要。</p>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Cyber Compass Console</p>
+          <h2>把网安学习的入口集中到一个控制台。</h2>
+          <p class="hero-text">追踪安全资讯，查看比赛日历，整理学习资源，按路线推进基础、Web、漏洞分析、CTF 和实战项目。</p>
         </div>
-        <div class="news-list" id="newsList"></div>
+        <form class="search-console" id="filters" autocomplete="off" aria-label="资讯筛选">
+          <label class="field">
+            <span>搜索资讯</span>
+            <input id="searchInput" type="search" name="q" placeholder="漏洞、攻防、应急响应">
+          </label>
+          <label class="field">
+            <span>来源</span>
+            <select id="sourceSelect" name="source">
+              <option value="all">全部来源</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>标签</span>
+            <select id="tagSelect" name="tag">
+              <option value="all">全部标签</option>
+            </select>
+          </label>
+          <button class="icon-button" id="refreshButton" type="button" title="刷新 RSS" aria-label="刷新 RSS">↻</button>
+        </form>
       </section>
 
-      <aside class="profile" aria-label="赛事查询">
-        <section class="panel">
-          <h3 class="profile-title">赛事查询</h3>
-          <p class="profile-lead">
-            <a href="http://www.supermatch.fun/" target="_blank" rel="noopener noreferrer">网络安全比赛日历</a>
-          </p>
-          <div class="note-list">
-            <article>
-              <h3>本周关注</h3>
-              <p>漏洞通告、应急响应、攻防技术、行业动态。</p>
-            </article>
-            <article>
-              <h3>阅读方式</h3>
-              <p>先看标题和摘要，遇到高价值内容再跳转原文深入学习。</p>
-            </article>
-            <article>
-              <h3>合规边界</h3>
-              <p>不全文转载，不采集非公开内容，只做学习导航。</p>
-            </article>
-          </div>
-        </section>
-      </aside>
+      <section class="module-strip" aria-label="五个栏目">
+        <a class="module-card" href="#news">
+          <span class="module-index">01</span>
+          <strong>资讯</strong>
+          <span>RSS 安全资讯雷达</span>
+        </a>
+        <a class="module-card" href="#events">
+          <span class="module-index">02</span>
+          <strong>赛事</strong>
+          <span>比赛日历与参赛入口</span>
+        </a>
+        <a class="module-card" href="#resources">
+          <span class="module-index">03</span>
+          <strong>资源</strong>
+          <span>漏洞库、靶场、文档</span>
+        </a>
+        <a class="module-card" href="#roadmap">
+          <span class="module-index">04</span>
+          <strong>学习路线</strong>
+          <span>从基础到实战推进</span>
+        </a>
+        <a class="module-card" href="#tools">
+          <span class="module-index">05</span>
+          <strong>安全工具箱</strong>
+          <span>常用工具分类导航</span>
+        </a>
+      </section>
+
+      <section class="section-shell" id="news">
+        <div class="section-title">
+          <p class="eyebrow">Intelligence Feed</p>
+          <h2>资讯</h2>
+          <p>内容来源于原站，本站只展示标题、摘要、来源和原文链接。</p>
+        </div>
+
+        <div class="news-layout">
+          <aside class="source-panel" aria-label="来源状态">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">RSS Health</p>
+                <h3>来源状态</h3>
+              </div>
+              <span id="sourceSummary">加载中</span>
+            </div>
+            <canvas id="signalCanvas" width="420" height="220" aria-label="RSS 来源连接图"></canvas>
+            <div class="source-list" id="sourceList"></div>
+          </aside>
+
+          <section class="feed-panel" aria-label="安全资讯列表">
+            <div class="feed-head">
+              <div>
+                <p class="eyebrow">Live Radar</p>
+                <h3>安全资讯雷达</h3>
+                <p id="feedMeta">正在拉取 RSS 来源...</p>
+              </div>
+            </div>
+            <div class="news-list" id="newsList"></div>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-shell" id="events">
+        <div class="section-title">
+          <p class="eyebrow">Competition</p>
+          <h2>赛事</h2>
+          <p>把比赛信息放到固定入口，方便平时训练和报名准备。</p>
+        </div>
+        <div class="feature-grid two-col">
+          <a class="feature-card feature-primary" href="http://www.supermatch.fun/" target="_blank" rel="noopener noreferrer">
+            <span class="status-light"></span>
+            <p class="card-kicker">外部日历</p>
+            <h3>网络安全比赛日历</h3>
+            <p>查看近期 CTF、攻防演练、网络安全竞赛和报名信息。</p>
+            <span class="card-action">打开比赛日历</span>
+          </a>
+          <article class="feature-card">
+            <span class="status-light muted"></span>
+            <p class="card-kicker">备赛建议</p>
+            <h3>赛前检查清单</h3>
+            <p>准备账号、队伍分工、工具环境、Writeup 模板和赛后复盘记录。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell" id="resources">
+        <div class="section-title">
+          <p class="eyebrow">Library</p>
+          <h2>资源</h2>
+          <p>先放静态入口，后续可以继续扩展为收藏夹或知识库。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <p class="card-kicker">漏洞库</p>
+            <h3>漏洞通告与 CVE</h3>
+            <p>跟踪漏洞编号、影响范围、修复建议和利用条件。</p>
+          </article>
+          <article class="feature-card">
+            <p class="card-kicker">靶场</p>
+            <h3>Web 与综合练习</h3>
+            <p>用于 SQL 注入、XSS、文件上传、权限绕过等基础训练。</p>
+          </article>
+          <article class="feature-card">
+            <p class="card-kicker">文档</p>
+            <h3>协议、系统与安全规范</h3>
+            <p>整理网络协议、Linux、HTTP、密码学和安全基线资料。</p>
+          </article>
+          <article class="feature-card">
+            <p class="card-kicker">社区</p>
+            <h3>博客、实验室与周报</h3>
+            <p>关注高质量安全团队、研究文章、技术周报和公开课。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell" id="roadmap">
+        <div class="section-title">
+          <p class="eyebrow">Roadmap</p>
+          <h2>学习路线</h2>
+          <p>适合大一阶段按阶段推进，先打基础，再进入专题和项目。</p>
+        </div>
+        <ol class="roadmap">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>网络与 Linux 基础</h3>
+              <p>理解 TCP/IP、DNS、HTTP、命令行、权限、进程和日志。</p>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Web 安全入门</h3>
+              <p>学习 OWASP Top 10、SQL 注入、XSS、SSRF、文件上传和鉴权缺陷。</p>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>漏洞分析与复现</h3>
+              <p>从公开漏洞通告出发，搭建环境、复现影响、整理修复方案。</p>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>CTF 与攻防实践</h3>
+              <p>按 Web、Crypto、Reverse、Pwn、Misc 分类刷题并写复盘。</p>
+            </div>
+          </li>
+          <li>
+            <span>05</span>
+            <div>
+              <h3>个人实战项目</h3>
+              <p>做一个安全资讯站、工具箱、靶场记录或漏洞复现知识库。</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section-shell" id="tools">
+        <div class="section-title">
+          <p class="eyebrow">Toolbox</p>
+          <h2>安全工具箱</h2>
+          <p>按任务分类整理工具，避免学习时到处找入口。</p>
+        </div>
+        <div class="tool-grid">
+          <article class="tool-card">
+            <h3>抓包分析</h3>
+            <p>HTTP 调试、流量观察、请求重放、证书排查。</p>
+          </article>
+          <article class="tool-card">
+            <h3>扫描探测</h3>
+            <p>端口、服务、目录、指纹和弱口令风险初筛。</p>
+          </article>
+          <article class="tool-card">
+            <h3>编码解码</h3>
+            <p>Base64、URL、Hex、JWT、哈希与常见格式转换。</p>
+          </article>
+          <article class="tool-card">
+            <h3>情报查询</h3>
+            <p>IP、域名、证书、备案、威胁情报和漏洞信息检索。</p>
+          </article>
+          <article class="tool-card">
+            <h3>靶场练习</h3>
+            <p>记录靶机、题目、环境、解题步骤和复盘要点。</p>
+          </article>
+        </div>
+      </section>
     </main>
 
     <template id="newsTemplate">

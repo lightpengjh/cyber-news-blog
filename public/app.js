@@ -65,7 +65,7 @@ function bindEvents() {
 
   refreshButton.addEventListener('click', async () => {
     refreshButton.disabled = true;
-    refreshButton.textContent = '…';
+    refreshButton.textContent = '...';
 
     try {
       await api('/api/refresh', { method: 'POST' });
@@ -81,7 +81,7 @@ function bindEvents() {
 
 async function loadAll() {
   state.loading = true;
-  feedMeta.textContent = '正在拉取 RSS 来源…';
+  feedMeta.textContent = '正在拉取 RSS 来源...';
 
   try {
     const [sourceData] = await Promise.all([
@@ -133,7 +133,8 @@ async function api(path, options = {}) {
 function renderFilterOptions() {
   const currentSource = sourceSelect.value || 'all';
   const currentTag = tagSelect.value || 'all';
-  const tags = [...new Set(state.sources.flatMap((source) => source.tags || []))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+  const tags = [...new Set(state.sources.flatMap((source) => source.tags || []))]
+    .sort((a, b) => a.localeCompare(b, 'zh-CN'));
 
   replaceOptions(sourceSelect, [
     { value: 'all', label: '全部来源' },
@@ -250,10 +251,25 @@ function drawSignal(sources) {
   const radius = Math.min(width, height) * 0.34;
 
   context.clearRect(0, 0, width, height);
-  context.fillStyle = '#fbfcfa';
+  context.fillStyle = '#07100f';
   context.fillRect(0, 0, width, height);
 
-  context.strokeStyle = '#d9e0d8';
+  context.strokeStyle = 'rgba(51, 242, 220, 0.16)';
+  context.lineWidth = 1;
+  for (let x = 18; x < width; x += 34) {
+    context.beginPath();
+    context.moveTo(x, 0);
+    context.lineTo(x, height);
+    context.stroke();
+  }
+  for (let y = 18; y < height; y += 34) {
+    context.beginPath();
+    context.moveTo(0, y);
+    context.lineTo(width, y);
+    context.stroke();
+  }
+
+  context.strokeStyle = 'rgba(51, 242, 220, 0.32)';
   context.lineWidth = 2;
 
   sources.forEach((source, index) => {
@@ -267,17 +283,17 @@ function drawSignal(sources) {
     context.stroke();
 
     context.beginPath();
-    context.fillStyle = source.status === 'ok' ? '#177245' : '#b42318';
+    context.fillStyle = source.status === 'ok' ? '#57f28f' : '#ff645f';
     context.arc(x, y, 9, 0, Math.PI * 2);
     context.fill();
   });
 
   context.beginPath();
-  context.fillStyle = '#0d9488';
+  context.fillStyle = '#33f2dc';
   context.arc(centerX, centerY, 16, 0, Math.PI * 2);
   context.fill();
 
-  context.fillStyle = '#17211c';
+  context.fillStyle = '#e9fffb';
   context.font = 'bold 18px Microsoft YaHei, sans-serif';
   context.textAlign = 'center';
   context.textBaseline = 'middle';

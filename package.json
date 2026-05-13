@@ -1,7 +1,7 @@
 {
-  "name": "cyber-news-blog",
+  "name": "cyber-compass",
   "version": "1.0.0",
-  "description": "本地演示用的个人网络安全新闻聚合博客。",
+  "description": "本地演示用的网络安全综合入口，包含资讯、赛事、资源、学习路线和安全工具箱。",
   "main": "server.js",
   "scripts": {
     "dev": "node server.js",
@@ -12,7 +12,8 @@
     "cybersecurity",
     "rss",
     "news",
-    "blog"
+    "resources",
+    "toolbox"
   ],
   "author": "",
   "license": "MIT",

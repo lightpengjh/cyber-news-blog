@@ -132,7 +132,7 @@ async function main() {
   }, REFRESH_INTERVAL_MS).unref();
 
   app.listen(PORT, () => {
-    console.log(`Cyber News Blog is running at http://localhost:${PORT}`);
+    console.log(`Cyber Compass is running at http://localhost:${PORT}`);
   });
 }
 

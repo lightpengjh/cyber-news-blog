@@ -5,3 +5,5 @@ npm-debug.log*
 server.log
 server.err
 .env
+
+.codex/
