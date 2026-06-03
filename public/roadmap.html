@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>学习路线 - 网安罗盘</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body data-page="roadmap">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="网安罗盘首页">
+        <img class="brand-logo" src="/assets/logo-custom.png" alt="网安罗盘 Logo">
+        <div class="brand-copy">
+          <h1>网安罗盘</h1>
+          <p>Cyber Compass</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="栏目导航">
+        <a href="/" data-nav="home">首页</a>
+        <a href="/news" data-nav="news">资讯</a>
+        <a href="/events" data-nav="events">赛事</a>
+        <a href="/resources" data-nav="resources">资源</a>
+        <a href="/roadmap" data-nav="roadmap">学习路线</a>
+        <a href="/tools" data-nav="tools">安全工具箱</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">深色</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Roadmap</p>
+          <h2>学习路线</h2>
+          <p>适合新手按阶段推进：先把网络、Linux、Web 基础打稳，再进入 CTF 专题、漏洞复现和个人项目沉淀。</p>
+        </div>
+        <div class="hero-panel">
+          <dl class="metric-grid">
+            <div>
+              <dt>01</dt>
+              <dd>基础环境</dd>
+            </div>
+            <div>
+              <dt>03</dt>
+              <dd>CTF 专题</dd>
+            </div>
+            <div>
+              <dt>05</dt>
+              <dd>项目沉淀</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="content-band">
+        <ol class="roadmap">
+          <li>
+            <span>01</span>
+            <div>
+              <h3>基础环境与网络常识</h3>
+              <p>准备虚拟机、编辑器、浏览器插件和抓包代理，理解 TCP/IP、DNS、HTTP、命令行、权限和日志。</p>
+              <div class="tag-row">
+                <span class="tag">Linux</span>
+                <span class="tag">HTTP</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <h3>Web 安全入门</h3>
+              <p>学习 OWASP Top 10、SQL 注入、XSS、SSRF、文件上传、反序列化和鉴权缺陷，配合靶场逐类练习。</p>
+              <div class="tag-row">
+                <span class="tag">Web</span>
+                <span class="tag">Burp</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <h3>CTF 专题刷题</h3>
+              <p>按 Web、Crypto、Reverse、Pwn、Misc 分类刷题，记录 payload、脚本、卡点和赛后复盘。</p>
+              <div class="tag-row">
+                <span class="tag">CTF</span>
+                <span class="tag">Writeup</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <h3>漏洞复现与攻防实践</h3>
+              <p>从公开漏洞通告出发，搭建环境、复现影响、理解补丁差异，再整理修复方案。</p>
+              <div class="tag-row">
+                <span class="tag">CVE</span>
+                <span class="tag">复现</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span>05</span>
+            <div>
+              <h3>项目沉淀与输出</h3>
+              <p>做一个安全资讯站、工具箱、靶场记录、漏洞复现知识库或个人博客，把学习过程变成作品。</p>
+              <div class="tag-row">
+                <span class="tag">项目</span>
+                <span class="tag">博客</span>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="content-band">
+        <div class="section-title">
+          <p class="eyebrow">Guides</p>
+          <h2>推荐文章与博客</h2>
+          <p>优先放能带新手建立方向感的文章和站点，遇到卡点时可以回来看思路、环境和复盘方式。</p>
+        </div>
+
+        <div class="article-grid">
+          <a class="feature-card feature-primary article-card" href="https://archerui.github.io/2025/05/12/CTF/Pwn/Pwn%E5%85%A5%E9%97%A8/" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">Pwn 入门</p>
+            <h3>CTF Pwn 入门</h3>
+            <p>从环境、保护机制和基础利用思路切入，适合准备进入 Pwn 方向的新手先建立整体框架。</p>
+            <div class="tag-row">
+              <span class="tag">Pwn</span>
+              <span class="tag">二进制</span>
+              <span class="tag">入门</span>
+            </div>
+            <span class="card-action">阅读文章</span>
+          </a>
+
+          <a class="feature-card article-card" href="https://expl0rer.top/" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">个人博客</p>
+            <h3>expl0rer.top</h3>
+            <p>综合安全博客，适合作为日常阅读和 Writeup 参考，学习别人如何拆题、记录和沉淀。</p>
+            <div class="tag-row">
+              <span class="tag">博客</span>
+              <span class="tag">Writeup</span>
+              <span class="tag">经验</span>
+            </div>
+            <span class="card-action">访问博客</span>
+          </a>
+
+          <a class="feature-card article-card" href="https://hello-ctf.com/" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">CTF 导航</p>
+            <h3>Hello CTF</h3>
+            <p>用来快速了解 CTF 方向、常用工具和学习材料，适合在开始刷题前先搭一张地图。</p>
+            <div class="tag-row">
+              <span class="tag">CTF</span>
+              <span class="tag">路线</span>
+              <span class="tag">工具</span>
+            </div>
+            <span class="card-action">查看路线</span>
+          </a>
+
+          <a class="feature-card article-card" href="https://ctf-wiki.org/" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">知识手册</p>
+            <h3>CTF Wiki</h3>
+            <p>按方向整理 CTF 知识点和题型方法，适合刷题时查概念、补公式和复盘解法。</p>
+            <div class="tag-row">
+              <span class="tag">Wiki</span>
+              <span class="tag">知识点</span>
+              <span class="tag">查漏补缺</span>
+            </div>
+            <span class="card-action">打开手册</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="/site.js" defer></script>
+  </body>
+</html>

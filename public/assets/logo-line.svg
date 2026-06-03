@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Cyber Compass shield logo">
+  <defs>
+    <linearGradient id="navy" x1="25" y1="16" x2="104" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#123d69"/>
+      <stop offset="1" stop-color="#061f3e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="46" y1="30" x2="84" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5a24a"/>
+      <stop offset="1" stop-color="#b8802d"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M64 12c10 12 25 20 45 25v35c0 23-17 38-45 50-28-12-45-27-45-50V37c20-5 35-13 45-25z" fill="#ffffff"/>
+  <path d="M64 12c10 12 25 20 45 25v35c0 23-17 38-45 50-28-12-45-27-45-50V37c20-5 35-13 45-25z" fill="none" stroke="url(#navy)" stroke-width="6" stroke-linejoin="round"/>
+
+  <path d="M27 64h18M83 64h18" fill="none" stroke="url(#navy)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M14 64h13M101 64h13M24 75h16M88 75h16" fill="none" stroke="url(#navy)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="13" cy="64" r="5" fill="#fff" stroke="url(#navy)" stroke-width="4"/>
+  <circle cx="115" cy="64" r="5" fill="#fff" stroke="url(#navy)" stroke-width="4"/>
+  <circle cx="22" cy="75" r="4" fill="#fff" stroke="url(#navy)" stroke-width="3.5"/>
+  <circle cx="106" cy="75" r="4" fill="#fff" stroke="url(#navy)" stroke-width="3.5"/>
+
+  <path d="M43 86a36 36 0 0 1 0-44" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linecap="butt"/>
+  <path d="M85 42a36 36 0 0 1 0 44" fill="none" stroke="url(#gold)" stroke-width="6" stroke-linecap="butt"/>
+  <path d="M45 36a42 42 0 0 1 21-9" fill="none" stroke="url(#navy)" stroke-width="4" stroke-linecap="butt"/>
+  <path d="M82 31a42 42 0 0 1 18 21" fill="none" stroke="url(#navy)" stroke-width="4" stroke-dasharray="6 5"/>
+  <path d="M29 77a42 42 0 0 0 23 23" fill="none" stroke="url(#navy)" stroke-width="4" stroke-dasharray="6 5"/>
+  <path d="M101 78a42 42 0 0 1-23 23" fill="none" stroke="url(#navy)" stroke-width="4"/>
+
+  <path d="M64 28 70 60 64 68 58 60 64 28z" fill="url(#gold)"/>
+  <path d="M64 100 58 68 64 60 70 68 64 100z" fill="url(#navy)"/>
+  <path d="M27 64 58 58 66 64 58 70 27 64z" fill="url(#navy)"/>
+  <path d="M101 64 70 70 62 64 70 58 101 64z" fill="url(#navy)"/>
+  <path d="M48 48 58 58 54 62 44 52zM80 48 70 58 74 62 84 52zM48 80l10-10 4 4-10 10zM80 80 70 70l-4 4 10 10z" fill="url(#navy)"/>
+
+  <circle cx="64" cy="64" r="10" fill="#fff" stroke="url(#navy)" stroke-width="7"/>
+  <circle cx="64" cy="64" r="3.5" fill="#0a2b50"/>
+</svg>

@@ -37,6 +37,7 @@ const fullDateFormatter = new Intl.DateTimeFormat('zh-CN', {
 init();
 
 function init() {
+  if (!filters || !newsList) return;
   bindEvents();
   loadAll();
   window.setInterval(loadAll, 5 * 60 * 1000);
@@ -242,6 +243,7 @@ function showEmpty(message) {
 }
 
 function drawSignal(sources) {
+  if (!signalCanvas) return;
   const canvas = signalCanvas;
   const context = canvas.getContext('2d');
   const width = canvas.width;
@@ -249,12 +251,13 @@ function drawSignal(sources) {
   const centerX = width / 2;
   const centerY = height / 2;
   const radius = Math.min(width, height) * 0.34;
+  const isDark = document.documentElement.dataset.theme === 'dark';
 
   context.clearRect(0, 0, width, height);
-  context.fillStyle = '#07100f';
+  context.fillStyle = isDark ? '#0f172a' : '#f8fafc';
   context.fillRect(0, 0, width, height);
 
-  context.strokeStyle = 'rgba(51, 242, 220, 0.16)';
+  context.strokeStyle = isDark ? 'rgba(56, 189, 248, 0.18)' : 'rgba(14, 165, 233, 0.14)';
   context.lineWidth = 1;
   for (let x = 18; x < width; x += 34) {
     context.beginPath();
@@ -269,7 +272,7 @@ function drawSignal(sources) {
     context.stroke();
   }
 
-  context.strokeStyle = 'rgba(51, 242, 220, 0.32)';
+  context.strokeStyle = isDark ? 'rgba(45, 212, 191, 0.44)' : 'rgba(14, 165, 233, 0.36)';
   context.lineWidth = 2;
 
   sources.forEach((source, index) => {
@@ -283,17 +286,17 @@ function drawSignal(sources) {
     context.stroke();
 
     context.beginPath();
-    context.fillStyle = source.status === 'ok' ? '#57f28f' : '#ff645f';
+    context.fillStyle = source.status === 'ok' ? '#10b981' : '#ef4444';
     context.arc(x, y, 9, 0, Math.PI * 2);
     context.fill();
   });
 
   context.beginPath();
-  context.fillStyle = '#33f2dc';
+  context.fillStyle = '#0ea5e9';
   context.arc(centerX, centerY, 16, 0, Math.PI * 2);
   context.fill();
 
-  context.fillStyle = '#e9fffb';
+  context.fillStyle = isDark ? '#e2e8f0' : '#0f172a';
   context.font = 'bold 18px Microsoft YaHei, sans-serif';
   context.textAlign = 'center';
   context.textBaseline = 'middle';

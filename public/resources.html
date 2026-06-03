@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>资源 - 网安罗盘</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body data-page="resources">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="网安罗盘首页">
+        <img class="brand-logo" src="/assets/logo-custom.png" alt="网安罗盘 Logo">
+        <div class="brand-copy">
+          <h1>网安罗盘</h1>
+          <p>Cyber Compass</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="栏目导航">
+        <a href="/" data-nav="home">首页</a>
+        <a href="/news" data-nav="news">资讯</a>
+        <a href="/events" data-nav="events">赛事</a>
+        <a href="/resources" data-nav="resources">资源</a>
+        <a href="/roadmap" data-nav="roadmap">学习路线</a>
+        <a href="/tools" data-nav="tools">安全工具箱</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">深色</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Library</p>
+          <h2>资源索引</h2>
+          <p>把适合新手上手的 CTF 靶场、Web 实验和入门资料放在一起，刷题、复现、查资料都能快速进入状态。</p>
+        </div>
+        <div class="hero-panel">
+          <dl class="metric-grid">
+            <div>
+              <dt>Web</dt>
+              <dd>漏洞练习</dd>
+            </div>
+            <div>
+              <dt>CTF</dt>
+              <dd>综合刷题</dd>
+            </div>
+            <div>
+              <dt>Docs</dt>
+              <dd>入门资料</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="content-band">
+        <div class="section-title">
+          <p class="eyebrow">Practice Labs</p>
+          <h2>靶场练习平台</h2>
+          <p>先从可重复练习的平台开始，按 Web、综合题和专题实验分流，适合边学边写复盘。</p>
+        </div>
+
+        <div class="resource-grid">
+          <a class="feature-card feature-primary resource-card" href="https://www.ctfhub.com/" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">综合靶场</p>
+            <h3>CTFHub</h3>
+            <p>覆盖 Web、技能树和常见漏洞题型，适合按照专题逐步刷题。</p>
+            <div class="tag-row">
+              <span class="tag">Web</span>
+              <span class="tag">技能树</span>
+              <span class="tag">新手友好</span>
+            </div>
+            <span class="card-action">打开平台</span>
+          </a>
+
+          <a class="feature-card resource-card" href="https://ctf.show/challenges" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">在线题库</p>
+            <h3>ctf.show challenges</h3>
+            <p>国内常用 CTF 练习平台，题型丰富，适合 Web 入门和专题强化。</p>
+            <div class="tag-row">
+              <span class="tag">Web</span>
+              <span class="tag">CTF</span>
+              <span class="tag">题库</span>
+            </div>
+            <span class="card-action">进入挑战</span>
+          </a>
+
+          <a class="feature-card resource-card" href="https://github.com/do0dl3/xss-labs" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">专题实验</p>
+            <h3>XSS-labs</h3>
+            <p>XSS 练习靶场，建议本地搭建后逐关理解输入点、过滤规则和绕过思路。</p>
+            <div class="tag-row">
+              <span class="tag">XSS</span>
+              <span class="tag">本地搭建</span>
+              <span class="tag">Web 基础</span>
+            </div>
+            <span class="card-action">查看项目</span>
+          </a>
+
+          <a class="feature-card resource-card" href="https://adworld.xctf.org.cn/" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">综合刷题</p>
+            <h3>XCTF 攻防世界</h3>
+            <p>按方向沉淀 CTF 题目，适合 Web、Reverse、Crypto、Pwn、Misc 逐类练习。</p>
+            <div class="tag-row">
+              <span class="tag">综合</span>
+              <span class="tag">方向训练</span>
+            </div>
+            <span class="card-action">打开靶场</span>
+          </a>
+
+          <a class="feature-card resource-card" href="https://portswigger.net/web-security" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">Web Academy</p>
+            <h3>PortSwigger Web Security Academy</h3>
+            <p>面向 Web 漏洞的系统化实验，适合配合 Burp Suite 学习请求分析和漏洞利用。</p>
+            <div class="tag-row">
+              <span class="tag">Web</span>
+              <span class="tag">Burp</span>
+              <span class="tag">实验</span>
+            </div>
+            <span class="card-action">开始学习</span>
+          </a>
+
+          <a class="feature-card resource-card" href="https://hello-ctf.com/" target="_blank" rel="noopener noreferrer">
+            <p class="card-kicker">入门资料</p>
+            <h3>Hello CTF</h3>
+            <p>面向 CTF 新手的资料集合，可用来补齐方向认知、工具清单和学习路径。</p>
+            <div class="tag-row">
+              <span class="tag">入门</span>
+              <span class="tag">工具</span>
+              <span class="tag">路线</span>
+            </div>
+            <span class="card-action">查看资料</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="/site.js" defer></script>
+  </body>
+</html>

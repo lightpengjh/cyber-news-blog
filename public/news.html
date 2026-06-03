@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>资讯 - 网安罗盘</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body data-page="news">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="网安罗盘首页">
+        <img class="brand-logo" src="/assets/logo-custom.png" alt="网安罗盘 Logo">
+        <div class="brand-copy">
+          <h1>网安罗盘</h1>
+          <p>Cyber Compass</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="栏目导航">
+        <a href="/" data-nav="home">首页</a>
+        <a href="/news" data-nav="news">资讯</a>
+        <a href="/events" data-nav="events">赛事</a>
+        <a href="/resources" data-nav="resources">资源</a>
+        <a href="/roadmap" data-nav="roadmap">学习路线</a>
+        <a href="/tools" data-nav="tools">安全工具箱</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">深色</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Intelligence Feed</p>
+          <h2>安全资讯雷达</h2>
+          <p>内容来源于原站，本站只展示标题、摘要、来源和原文链接。</p>
+        </div>
+        <form class="search-console" id="filters" autocomplete="off" aria-label="资讯筛选">
+          <label class="field">
+            <span>搜索资讯</span>
+            <input id="searchInput" type="search" name="q" placeholder="漏洞、攻防、应急响应">
+          </label>
+          <label class="field">
+            <span>来源</span>
+            <select id="sourceSelect" name="source">
+              <option value="all">全部来源</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>标签</span>
+            <select id="tagSelect" name="tag">
+              <option value="all">全部标签</option>
+            </select>
+          </label>
+          <button class="icon-button" id="refreshButton" type="button" title="刷新 RSS" aria-label="刷新 RSS">↻</button>
+        </form>
+      </section>
+
+      <section class="content-band">
+        <div class="news-layout">
+          <aside class="source-panel" aria-label="来源状态">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">RSS Health</p>
+                <h3>来源状态</h3>
+              </div>
+              <span id="sourceSummary">加载中</span>
+            </div>
+            <canvas id="signalCanvas" width="420" height="220" aria-label="RSS 来源连接图"></canvas>
+            <div class="source-list" id="sourceList"></div>
+          </aside>
+
+          <section class="feed-panel" aria-label="安全资讯列表">
+            <div class="feed-head">
+              <div>
+                <p class="eyebrow">Live Radar</p>
+                <h3>资讯列表</h3>
+                <p id="feedMeta">正在拉取 RSS 来源...</p>
+              </div>
+            </div>
+            <div class="news-list" id="newsList"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <template id="newsTemplate">
+      <article class="news-item">
+        <div class="news-topline">
+          <span class="source-pill"></span>
+          <time></time>
+        </div>
+        <h3><a target="_blank" rel="noopener noreferrer"></a></h3>
+        <p class="summary"></p>
+        <div class="tag-row"></div>
+      </article>
+    </template>
+
+    <script src="/site.js" defer></script>
+    <script src="/news.js" defer></script>
+  </body>
+</html>

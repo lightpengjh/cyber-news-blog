@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>赛事 - 网安罗盘</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body data-page="events">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="网安罗盘首页">
+        <img class="brand-logo" src="/assets/logo-custom.png" alt="网安罗盘 Logo">
+        <div class="brand-copy">
+          <h1>网安罗盘</h1>
+          <p>Cyber Compass</p>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="栏目导航">
+        <a href="/" data-nav="home">首页</a>
+        <a href="/news" data-nav="news">资讯</a>
+        <a href="/events" data-nav="events">赛事</a>
+        <a href="/resources" data-nav="resources">资源</a>
+        <a href="/roadmap" data-nav="roadmap">学习路线</a>
+        <a href="/tools" data-nav="tools">安全工具箱</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">深色</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Competition</p>
+          <h2>赛事入口</h2>
+          <p>比赛日历、报名入口和备赛检查放在独立页面，平时训练更好找。</p>
+        </div>
+        <div class="stat-panel hero-panel">
+          <dl class="metric-grid">
+            <div>
+              <dt>Calendar</dt>
+              <dd>比赛日历</dd>
+            </div>
+            <div>
+              <dt>Team</dt>
+              <dd>分工准备</dd>
+            </div>
+            <div>
+              <dt>Review</dt>
+              <dd>复盘记录</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="content-band">
+        <div class="feature-grid two-col">
+          <a class="feature-card feature-primary" href="http://www.supermatch.fun/" target="_blank" rel="noopener noreferrer">
+            <span class="status-light"></span>
+            <p class="card-kicker">外部日历</p>
+            <h3>网络安全比赛日历</h3>
+            <p>查看近期 CTF、攻防演练、网络安全竞赛和报名信息。</p>
+            <span class="card-action">打开比赛日历</span>
+          </a>
+          <article class="feature-card">
+            <span class="status-light muted"></span>
+            <p class="card-kicker">备赛建议</p>
+            <h3>赛前检查清单</h3>
+            <p>准备账号、队伍分工、工具环境、Writeup 模板和赛后复盘记录。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="/site.js" defer></script>
+  </body>
+</html>

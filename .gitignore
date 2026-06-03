@@ -7,3 +7,16 @@ server.err
 .env
 
 .codex/
+
+# Generated presentation/video artifacts
+ppt/
+pptx-quality/
+pptx-work/
+video-output/
+*.ppt
+*.pptx
+*.mp4
+*.skll
+*.skill
+ChatGPT Image*.png
+qidong.cmd
