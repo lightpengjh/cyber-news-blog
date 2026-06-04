@@ -641,10 +641,14 @@ main {
   grid-template-columns: minmax(230px, 310px) minmax(0, 1fr);
   gap: 18px;
   align-items: start;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .source-panel,
 .feed-panel {
+  min-width: 0;
+  max-width: 100%;
   padding: 18px;
 }
 
@@ -655,6 +659,11 @@ main {
   gap: 16px;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.panel-head > div,
+.feed-head > div {
+  min-width: 0;
 }
 
 .panel-head h3,
@@ -674,6 +683,7 @@ main {
 #signalCanvas {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   margin: 16px 0;
   border: 1px solid var(--line);
@@ -684,13 +694,15 @@ main {
 .source-list {
   display: grid;
   gap: 10px;
+  min-width: 0;
 }
 
 .source-row {
   display: grid;
-  grid-template-columns: 10px 1fr auto;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
+  min-width: 0;
   min-height: 34px;
   color: var(--muted);
   font-size: 13px;
@@ -730,10 +742,13 @@ main {
 .news-list {
   display: grid;
   gap: 12px;
+  min-width: 0;
   margin-top: 16px;
 }
 
 .news-item {
+  min-width: 0;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 17px;
@@ -752,6 +767,7 @@ main {
 
 .news-topline {
   justify-content: space-between;
+  min-width: 0;
   margin-bottom: 10px;
 }
 
@@ -767,6 +783,9 @@ main {
   color: var(--accent-strong);
   background: var(--accent-soft);
   font-size: 12px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -778,6 +797,7 @@ main {
 .news-item h3 {
   font-size: 20px;
   line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .news-item a {
@@ -785,6 +805,7 @@ main {
   color: var(--text);
   text-decoration-color: color-mix(in srgb, var(--accent) 44%, transparent);
   text-underline-offset: 4px;
+  overflow-wrap: anywhere;
 }
 
 .news-item a:hover {
@@ -796,9 +817,11 @@ main {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.75;
+  overflow-wrap: anywhere;
 }
 
 .tag-row {
+  min-width: 0;
   margin-top: 14px;
 }
 

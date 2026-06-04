@@ -1,6 +1,6 @@
 # 网安罗盘
 
-这是一个本地演示用的网络安全综合入口。它聚合中文安全 RSS，同时把资讯、赛事、资源、学习路线和安全工具箱拆成独立页面，默认使用浅色主题，并保留深色主题切换。
+它聚合中文安全 RSS，同时把资讯、赛事、资源、学习路线和安全工具箱拆成独立页面，默认使用浅色主题，并保留深色主题切换。
 
 ## 使用方式
 
@@ -8,21 +8,6 @@
 npm.cmd install
 npm.cmd run dev
 ```
-
-然后访问：
-
-```text
-http://localhost:3000
-```
-
-常用页面：
-
-- `http://localhost:3000/`
-- `http://localhost:3000/news`
-- `http://localhost:3000/events`
-- `http://localhost:3000/resources`
-- `http://localhost:3000/roadmap`
-- `http://localhost:3000/tools`
 
 ## 功能
 
